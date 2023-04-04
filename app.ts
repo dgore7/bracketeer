@@ -1,10 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
-import dotenv from "dotenv";
-import db from "./db.js";
+import db from "./models/index.js"
 
-dotenv.config(); //Reads .env file and makes it accessible via process.env
-
-db.connectToDB();
+await db.sequelize()
 
 const app = express();
 
