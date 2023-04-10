@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import db from "./models/index.js"
 
-await db.sequelize()
+await db.sequelize.sync()
 
 const app = express();
 

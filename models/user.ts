@@ -1,6 +1,6 @@
 "use strict";
 
-import { UUIDV4 } from "sequelize";
+import { DataTypes, UUIDV4 } from "sequelize";
 import { DataType, Model, Sequelize } from "sequelize";
 
 interface UserAttributes {
@@ -27,7 +27,7 @@ export default (
 
     static associate(models: any) {
       // define association here
-      User.hasMany(models.Tournament);
+      User.hasMany(models.Bracket);
     }
   }
   User.init(
